@@ -27,7 +27,7 @@ include_once "../crud.php";
       <label for="description">Description</label>
       <input name="description" type="text" class="input" value="<?php echo $products->description ?>">
       <div class="f-row">
-        <input name="update_products" type="submit" value="Edit product !" class="btn">
+        <input id="ajax" name="update_products" type="submit" value="Edit product !" class="btn">
       </div>
     </form>
   </body>

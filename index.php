@@ -7,15 +7,31 @@
     <base href="<?php echo $base_url ?>">
     <meta charset="UTF-8">
     <link rel="stylesheet" href="styles/styles.css">
+    <script type="text/javascript">
+    (function app () {
+  function checkAll () {
+      allBtns = document.querySelectorAll(".delete input");
+      allBtns.forEach(function (e) {
+          e.checked = true;
+      })
+  }
+
+window.addEventListener("DOMContentLoaded", function () {
+  btnCheckAll = document.getElementById("checkAll");
+  btnCheckAll.addEventListener("click", checkAll);
+})
+
+
+
+}());
+    </script>
 </head>
+
 <body>
     <h1>BizOnline Round 2</h1>
     <h3>
         <span>Ajouter un nouveau Produit</span>
     </h3>
-    <?php if (isset($msg_crud)) {
-        echo "<p class=\"msg\">$msg_crud</p>";
-    }?>
 
     <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>" class="formulaire">
         <input name="nom" type="text" placeholder="nom" required>
@@ -35,7 +51,7 @@
 
     <?php if (isset($products) && count($products)): ?>
 
-        <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>" class="form">
+        <form id="form" method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>" class="form">
             <table id="products" class="tabler products">
                 <thead>
                     <tr>
@@ -46,6 +62,7 @@
                         <td class="delete">
                             <input type="submit" name="delete_products"
                             value="delete" class="tabler-btn">
+                            <button class="delete tabler-btn" type="button" id="checkAll">Check all</button>
                         </td>
                     </tr>
                 </thead>

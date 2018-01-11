@@ -1,0 +1,236 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html {
+    font-size: 16px;
+}
+body {
+    font-family: Avenir;
+    padding: 20px;
+}
+/*titre h1*/
+h1{
+  color: coral;
+  font-size: 1.3rem;
+  text-align: center;
+  background:beige;
+  height:100px;
+  width:100%;
+  border:2px dashed;
+  line-height: 100px;
+}
+
+/*titre h3*/
+h3 {
+    color: coral;
+    font-size: 1.3rem;
+    text-align: center;
+    margin:30px;
+}
+
+/*ligne de séparation*/
+hr{
+  border:2px dashed crimson;
+}
+
+/*balise de description*/
+textarea{
+  margin-bottom: 20px;
+  height:100px;
+  box-shadow: 0px 0.1px 2px 0.9px #696666;
+  border: none;
+  padding: 5px 10px 5px 20px;
+  border-radius: 10px;
+  font-size: 1rem;
+}
+
+/*balise input*/
+input{
+    box-shadow: 0px 0.1px 2px 0.9px #696666;
+    border: none;
+    font-size: 1rem;
+    height: 36px;
+    padding: 5px 10px 5px 20px;
+    border-radius: 10px;
+}
+
+/*balise input number à regler*/
+input[type=number]{
+  margin: 20px 0px 20px 0px;
+  width:100%;
+  border-radius: 10px;
+}
+
+/*tout le formulaire bien centrer*/
+.formulaire{
+  width: 400px;
+  margin-left: 625px;
+  display: flex;
+  flex-direction: column;
+}
+
+.btn {
+    background-color: #FFEBCD;
+    border: 1px dashed crimson;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1.5rem;
+    margin: 20px 0;
+    height: 50px;
+    width:100%;
+    padding: 8px;
+    text-align: center;
+    font-weight: bold;
+}
+.btn:hover {
+    background-color: yellow;
+    color: white;
+}
+
+.clickable {
+    cursor: pointer;
+}
+.f-row, .f-col {
+    display: flex;
+}
+
+
+
+p {
+    box-shadow: -0.9px 0.1px 6.1px 0.2px #696666;
+    border-radius: .1rem;
+    max-width: 720px;
+    margin-bottom: 20px;
+    padding: 10px;
+    text-align: justify;
+}
+p:empty {
+    display: none;
+}
+table {
+  border-collapse: collapse;
+}
+td, th {
+  border: 2px solid black;
+  height: 42px;
+  width: 42px;
+  padding: 8px;
+  text-align: center;
+}
+a {
+    color: inherit;
+    cursor: pointer;
+    text-decoration: none;
+}
+label[for] {
+    cursor: pointer;
+}
+input[type=checkbox] {
+  cursor: pointer;
+}
+[disabled] {
+    cursor: not-allowed;
+}
+
+
+
+
+
+
+#app a {
+    font-weight: bold;
+    text-shadow: 0px 0px 1px darkorange;
+}
+a:hover {
+    color: darkorange;
+}
+li {
+    list-style: none;
+}
+#grid_header {
+    border-bottom: 2px solid dodgerblue;
+    background: white;
+    padding: 0 20px;
+    position: fixed;
+    width: 100%;
+    z-index: 2;
+}
+#grid_header > .f-row {
+    align-items: center;
+    height: 40px;
+    justify-content: space-between;
+}
+#grid_nav .list {
+    display: flex;
+}
+#grid_nav .item {
+    flex: 1;
+}
+#app {
+    min-height: 50vh;
+    padding: 10px 20px 40px;
+    position: relative;
+    top: 42px;
+}
+#grid_footer {
+    justify-content: flex-end;
+    padding: 0 20px;
+    position: relative;
+    top: 42px;
+}
+.tabler {
+    margin-bottom: 40px;
+    min-width: 90%;
+}
+.tabler-btn {
+  border-style: solid;
+  border-width: 2px;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 1.05rem;
+  padding: 8px;
+}
+
+.tabler.bills  {
+    white-space: nowrap;
+}
+
+.bill .tabler-btn {
+  border-color: dodgerblue;
+}
+.bill .tabler-btn:hover {
+  background: dodgerblue;
+}
+.update .tabler-btn {
+  border-color: #B4D455;
+}
+.delete .tabler-btn {
+  border-color: darkorange;
+}
+.update .tabler-btn:hover {
+  background: #B4D455;
+}
+.delete .tabler-btn:hover {
+  background: darkorange;
+}
+
+.tabler-btn:hover {
+  color: white;
+}
+
+.msg {
+  border-radius: .4rem;
+  box-shadow: -0.9px 0.1px 6.1px 0.2px #B4D455;
+  max-width: 380px;
+  padding: 20px;
+}
+
+form.bill:not(.is-active) {
+  display: none;
+}
+
+.is-hidden {
+    display: none;
+}

@@ -33,7 +33,7 @@ if (isset($_POST["update_products"])) {
 }
 
 if (isset($_POST["delete_products"]) &&
-    isset($_POST["delete_user_ids"]) &&
-    count($_POST["delete_user_ids"])) {
+    isset($_POST["delete_product_ids"]) &&
+    count($_POST["delete_product_ids"])) {
         deleteProduct();
 }

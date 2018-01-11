@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>CRUD 1</title>
+    <title>BizOnline Round 2</title>
     <base href="<?php echo $base_url ?>">
     <meta charset="UTF-8">
     <link rel="stylesheet" href="styles/styles.css">
@@ -23,7 +23,7 @@
         <textarea name="description" type="text" placeholder="description" col="10" row="10"></textarea>
         <input type="text" name="image" placeholder="image">
         <div class="f-row">
-            <input name="create_product" type="submit" value="create product !" class="btn">
+            <input name="create_product" type="submit" value="Create product !" class="btn">
         </div>
     </form>
     <hr>
@@ -35,7 +35,7 @@
 
     <?php if (isset($products) && count($products)): ?>
 
-        <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>" class="form list-user">
+        <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>" class="form">
             <table id="products" class="tabler products">
                 <thead>
                     <tr>
@@ -60,7 +60,7 @@
                         <a class=\"tabler-btn\" href=\"products/edit-products.php?id=$products->id\">edit</a>
                         </td>";
                         echo "<td class=\"delete\">
-                        <input name=\"delete_user_ids[]\" type=\"checkbox\" value=\"$products->id\" />
+                        <input name=\"delete_product_ids[]\" type=\"checkbox\" value=\"$products->id\" />
                         </td>";
                         echo "</tr>";
                     } ?>

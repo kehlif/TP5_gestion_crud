@@ -48,11 +48,15 @@ function updateProducts(){
  }
 
 
-// function deleteProduct(){
-//   global $db;
-//
-//   foreach ($_POST["delete_product_ids"] as $id) {
-//   $statement = $db->prepare($sql);
-//   $statement->bindParam(":id", $id, PDO::PARAM_INT);
-//   }
-// }
+function deleteProduct(){
+  global $db;
+
+  foreach ($_POST["delete_product_ids"] as $id) {
+  $sql = "DELETE FROM produits WHERE id = :id";
+  $statement = $db->prepare($sql);
+  $statement->bindParam(":id", $id, PDO::PARAM_INT);
+  $res = $statement->execute();
+  $msg_crud = ($res === true) ? "suppression ok" : "soucis de suppression";
+  }
+  header("Location: index.php");
+}
